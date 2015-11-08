@@ -50,8 +50,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/visabutton"
+        android:src="@drawable/visalogo"
+        android:layout_below="@+id/macysbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swapButton"
+        android:src="@drawable/swapimage"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp"
-        android:src="@drawable/visalogo"/>
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

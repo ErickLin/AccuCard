@@ -6,4 +6,5 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_add_target">AddTargetActivity</string>
     <string name="title_activity_add_gift_card">AddGiftCardActivity</string>
+    <string name="title_activity_swap">SwapActivity</string>
 </resources>
