@@ -9,12 +9,16 @@ import java.util.HashMap;
 public class User {
     public User[] allUsers=new User[3];
 
+    private String name;
+    private String password;
     private ArrayList<GiftCard> giftCards;
     private ArrayList<PrepaidCard> prepaidCards;
     private double totalPrepaid;
     private HashMap<String, Double> totalGift;
 
-    public User() {
+    public User(String n, String pass) {
+        name=n;
+        password=pass;
         giftCards=new ArrayList<GiftCard>();
         prepaidCards=new ArrayList<PrepaidCard>();
         totalPrepaid=0.0;
@@ -34,6 +38,9 @@ public class User {
         return totalPrepaid;
     }
 
+    public String getName() {
+        return name;
+    }
     public void addGiftCard(GiftCard card) {
         giftCards.add(card);
         if(totalGift.containsKey(card.getCompany())) {

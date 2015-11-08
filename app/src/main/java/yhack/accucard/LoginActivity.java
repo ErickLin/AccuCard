@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.ContentResolver;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -40,7 +41,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
+            "sreejan.kumar@yale.edu:sk2436", "bill.gates@yale.edu:microsoft", "mark.zuckerberg@yale.edu:facebook"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -150,7 +151,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
+        return password.length()>4;
     }
 
     /**
@@ -276,7 +277,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 }
             }
 
-            // TODO: register the new account here.
+           User u=new User(mEmail, mPassword);
+
             return true;
         }
 
@@ -287,6 +289,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
             if (success) {
                 finish();
+                Intent intent=new Intent(LoginActivity.this,GiftCardActivity.class);
+                startActivity(intent);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
