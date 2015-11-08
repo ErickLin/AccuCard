@@ -12,7 +12,6 @@ public class GiftCard {
     public GiftCard(String cmpy, double amt, String num, String secode) {
         company=cmpy;
         amount=amt;
-        amount=amt;
         code=num;
         securityCode=secode;
     }

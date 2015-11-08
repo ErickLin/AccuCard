@@ -1,9 +1,12 @@
 package yhack.accucard;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 
 public class GiftCardActivity extends ActionBarActivity {
@@ -12,6 +15,53 @@ public class GiftCardActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gift_card);
+
+        User.all();
+
+        ImageButton bestbuyButton=(ImageButton) findViewById(R.id.bestbuybutton);
+        bestbuyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  Intent intent = new Intent(GiftCardActivity.this, AddBestBuyActivity.class);
+               // startActivity(intent);
+            }
+        });
+
+        ImageButton macysButton=(ImageButton) findViewById(R.id.macysbutton);
+        macysButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // Intent intent = new Intent(GiftCardActivity.this, AddMacysActivity.class);
+               // startActivity(intent);
+            }
+        });
+
+        ImageButton microsoftButton=(ImageButton) findViewById(R.id.microsoftbutton);
+        microsoftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // Intent intent = new Intent(GiftCardActivity.this, AddMicrosoftActivity.class);
+               // startActivity(intent);
+            }
+        });
+
+        ImageButton targetButton=(ImageButton) findViewById(R.id.targetbutton);
+        targetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton visaButton=(ImageButton) findViewById(R.id.visabutton);
+        visaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent intent = new Intent(GiftCardActivity.this, AddGiftCardActivity.class);
+               // startActivity(intent);
+            }
+        });
     }
 
     @Override

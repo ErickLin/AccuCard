@@ -7,7 +7,8 @@ import java.util.HashMap;
  * Created by Sreejan on 11/7/2015.
  */
 public class User {
-    public User[] allUsers=new User[3];
+    public static User[] allUsers=new User[3];
+
 
     private String name;
     private String password;
@@ -23,6 +24,19 @@ public class User {
         prepaidCards=new ArrayList<PrepaidCard>();
         totalPrepaid=0.0;
         totalGift=new HashMap<String, Double>();
+
+
+
+    }
+
+    public static void all() {
+        allUsers[0]=new User("sreejan.kumar@yale.edu","sk2436");
+        allUsers[0].addGiftCard(new GiftCard("BestBuy",50.0,"034203403","053"));
+        allUsers[0].addGiftCard(new GiftCard("BestBuy", 100.0, "23429034", "041"));
+        allUsers[0].addGiftCard(new GiftCard("BestBuy", 200.0, "34298349", "012"));
+        allUsers[0].addGiftCard(new GiftCard("Target",200.0,"2304824","313"));
+        allUsers[1]=new User("bill.gates@yale.edu","microsoft");
+        allUsers[2]=new User("mark.zuckerberg@yale.edu", "facebook");
     }
 
     public ArrayList<GiftCard> getGiftCards() {

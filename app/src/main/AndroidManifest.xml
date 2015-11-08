@@ -44,8 +44,11 @@
 
         <activity
             android:name=".GiftCardActivity"
-            android:label="@string/title_activity_gift_card"
-            >
+            android:label="@string/title_activity_gift_card" >
+        </activity>
+        <activity
+            android:name=".AddTargetActivity"
+            android:label="@string/title_activity_add_target" >
         </activity>
     </application>
 

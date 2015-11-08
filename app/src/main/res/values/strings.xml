@@ -4,4 +4,5 @@
     <string name="title_activity_gift_card">GiftCardActivity</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add_target">AddTargetActivity</string>
 </resources>
