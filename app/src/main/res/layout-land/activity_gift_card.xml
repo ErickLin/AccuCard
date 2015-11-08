@@ -11,9 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bestbuybutton"
-        android:layout_marginTop="56dp"
         android:src="@drawable/bestbuylogo"
-        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/microsoftbutton"
         android:layout_alignLeft="@+id/macysbutton"
         android:layout_alignStart="@+id/macysbutton" />
 
@@ -22,7 +21,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/microsoftbutton"
         android:src="@drawable/microsoftlogo"
-        android:layout_alignTop="@+id/bestbuybutton"
+        android:layout_above="@+id/targetbutton"
         android:layout_toRightOf="@+id/bestbuybutton"
         android:layout_toEndOf="@+id/bestbuybutton" />
 
@@ -31,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/macysbutton"
         android:src="@drawable/macyslogo"
-        android:layout_below="@+id/bestbuybutton"
+        android:layout_above="@+id/visabutton"
         android:layout_alignLeft="@+id/visabutton"
         android:layout_alignStart="@+id/visabutton" />
 
@@ -41,14 +40,13 @@
         android:id="@+id/targetbutton"
         android:src="@drawable/targetlogo"
         android:layout_alignBottom="@+id/macysbutton"
-        android:layout_alignLeft="@+id/microsoftbutton"
-        android:layout_alignStart="@+id/microsoftbutton" />
+        android:layout_toRightOf="@+id/macysbutton"
+        android:layout_toEndOf="@+id/macysbutton" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/visabutton"
-        android:layout_marginBottom="63dp"
         android:src="@drawable/visalogo"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

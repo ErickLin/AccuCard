@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-
 public class GiftCardActivity extends ActionBarActivity {
 
     @Override
@@ -58,8 +57,8 @@ public class GiftCardActivity extends ActionBarActivity {
         visaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(GiftCardActivity.this, AddGiftCardActivity.class);
-               // startActivity(intent);
+                Intent intent = new Intent(GiftCardActivity.this, AddCardActivity.class);
+                startActivity(intent);
             }
         });
     }
