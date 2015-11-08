@@ -50,6 +50,10 @@
             android:name=".AddTargetActivity"
             android:label="@string/title_activity_add_target" >
         </activity>
+        <activity
+            android:name=".AddGiftCardActivity"
+            android:label="@string/title_activity_add_gift_card" >
+        </activity>
     </application>
 
 </manifest>

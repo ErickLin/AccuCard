@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 
 public class GiftCardActivity extends ActionBarActivity {
+    public static String company;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +23,9 @@ public class GiftCardActivity extends ActionBarActivity {
         bestbuyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Intent intent = new Intent(GiftCardActivity.this, AddBestBuyActivity.class);
-               // startActivity(intent);
+                Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                company="BestBuy";
+                startActivity(intent);
             }
         });
 
@@ -31,8 +33,9 @@ public class GiftCardActivity extends ActionBarActivity {
         macysButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(GiftCardActivity.this, AddMacysActivity.class);
-               // startActivity(intent);
+                Intent intent = new Intent(GiftCardActivity.this,AddTargetActivity.class);
+                company="Macys";
+                startActivity(intent);
             }
         });
 
@@ -40,8 +43,9 @@ public class GiftCardActivity extends ActionBarActivity {
         microsoftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(GiftCardActivity.this, AddMicrosoftActivity.class);
-               // startActivity(intent);
+                Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                company="Microsoft";
+                startActivity(intent);
             }
         });
 
@@ -50,6 +54,7 @@ public class GiftCardActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                company="Target";
                 startActivity(intent);
             }
         });

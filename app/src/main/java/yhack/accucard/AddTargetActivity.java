@@ -19,20 +19,21 @@ public class AddTargetActivity extends ActionBarActivity {
         setContentView(R.layout.activity_add_target);
 
         TextView largeText=(TextView) findViewById(R.id.companyText);
-        largeText.setText("Target");
+        largeText.setText(GiftCardActivity.company);
 
         TextView cardText=(TextView) findViewById(R.id.cardsText);
         String cardsText="";
 
-        if(!User.allUsers[0].getTotalGifts().containsKey("Target")) {
+        if(!User.allUsers[0].getTotalGifts().containsKey(GiftCardActivity.company)) {
             cardsText+="No cards for this company";
         }
         else {
             int count=1;
 
             for(int i=0;i<User.allUsers[0].getGiftCards().size();i++) {
-                if(User.allUsers[0].getGiftCards().get(i).getCompany().equals("Target")) {
-                    cardsText+="Card "+count +" : $"+ User.allUsers[0].getGiftCards().get(i).getAmount();
+                if(User.allUsers[0].getGiftCards().get(i).getCompany().equals(GiftCardActivity.company)) {
+                    cardsText+="Card "+count +" : $"+ User.allUsers[0].getGiftCards().get(i).getAmount()+"\n";
+                    count++;
                 }
             }
         }
@@ -42,8 +43,8 @@ public class AddTargetActivity extends ActionBarActivity {
         addCardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //  Intent intent = new Intent(AddTargetActivity.this, AddGiftCardActivity.class);
-                //  startActivity(intent);
+                  Intent intent = new Intent(AddTargetActivity.this, AddGiftCardActivity.class);
+                  startActivity(intent);
             }
         });
 
