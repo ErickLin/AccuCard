@@ -7,4 +7,7 @@
     <string name="title_activity_add_target">AddTargetActivity</string>
     <string name="title_activity_add_card">AddCardActivity</string>
     <string name="numberCards">Number of Cards: 0</string>
+    <string name="title_activity_add_gift_card">AddGiftCardActivity</string>
+    <string name="title_activity_swap">SwapActivity</string>
+>>>>>>> 2260a6c264bd52383e66d9915d85cc5cd0dd2925
 </resources>

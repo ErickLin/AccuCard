@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class GiftCardActivity extends ActionBarActivity {
+    public static String company;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,48 +18,60 @@ public class GiftCardActivity extends ActionBarActivity {
 
         User.all();
 
-        ImageButton bestbuyButton=(ImageButton) findViewById(R.id.bestbuybutton);
+        ImageButton bestbuyButton = (ImageButton) findViewById(R.id.bestbuybutton);
         bestbuyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Intent intent = new Intent(GiftCardActivity.this, AddBestBuyActivity.class);
-               // startActivity(intent);
-            }
-        });
-
-        ImageButton macysButton=(ImageButton) findViewById(R.id.macysbutton);
-        macysButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // Intent intent = new Intent(GiftCardActivity.this, AddMacysActivity.class);
-               // startActivity(intent);
-            }
-        });
-
-        ImageButton microsoftButton=(ImageButton) findViewById(R.id.microsoftbutton);
-        microsoftButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // Intent intent = new Intent(GiftCardActivity.this, AddMicrosoftActivity.class);
-               // startActivity(intent);
-            }
-        });
-
-        ImageButton targetButton=(ImageButton) findViewById(R.id.targetbutton);
-        targetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                company = "BestBuy";
                 startActivity(intent);
             }
         });
 
-        ImageButton visaButton=(ImageButton) findViewById(R.id.visabutton);
+        ImageButton macysButton = (ImageButton) findViewById(R.id.macysbutton);
+        macysButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                company = "Macys";
+                startActivity(intent);
+            }
+        });
+
+        ImageButton microsoftButton = (ImageButton) findViewById(R.id.microsoftbutton);
+        microsoftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                company = "Microsoft";
+                startActivity(intent);
+            }
+        });
+
+        ImageButton targetButton = (ImageButton) findViewById(R.id.targetbutton);
+        targetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GiftCardActivity.this, AddTargetActivity.class);
+                company = "Target";
+                startActivity(intent);
+            }
+        });
+
+        ImageButton visaButton = (ImageButton) findViewById(R.id.visabutton);
         visaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GiftCardActivity.this, AddCardActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        ImageButton swapButton = (ImageButton) findViewById(R.id.swapButton);
+        swapButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(GiftCardActivity.this, SwapActivity.class);
+                startActivity(i);
             }
         });
     }

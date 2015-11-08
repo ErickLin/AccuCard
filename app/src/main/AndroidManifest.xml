@@ -53,6 +53,12 @@
         <activity
             android:name=".AddCardActivity"
             android:label="@string/title_activity_add_card" >
+            android:name=".AddGiftCardActivity"
+            android:label="@string/title_activity_add_gift_card" >
+        </activity>
+        <activity
+            android:name=".SwapActivity"
+            android:label="@string/title_activity_swap" >
         </activity>
     </application>
 
