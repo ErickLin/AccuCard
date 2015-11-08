@@ -35,7 +35,10 @@ public class AddCardActivity extends AppCompatActivity {
                 expirationDate.setText("");
                 amount.setText("");
                 numCards++;
-                total += Double.parseDouble(amount.getText().toString());
+                String str = amount.getText().toString();
+                if (str != null && !str.isEmpty()) {
+                    total += Double.parseDouble(str);
+                }
                 numberCards.setText("Number of Cards: " + numCards);
                 currentTotal.setText("Current Total: $" + total);
             }
